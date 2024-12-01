@@ -17,7 +17,9 @@ export default function App() {
       )
     );
   const handleClearList = () =>
-    window.confirm("Are you sure to delete all items?") && setItems([]);
+    items.length > 0 &&
+    window.confirm("Are you sure to delete all items?") &&
+    setItems([]);
 
   return (
     <div className="app">
